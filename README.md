@@ -7,4 +7,5 @@ Running backend:
 -python manage.py runserver
 
 Running frontend:
-cd frontend
+-cd frontend
+-npm start
