@@ -4,4 +4,4 @@ from .models import PopulationData
 class PopulationDataSerializer(serializers.ModelSerializer):
     class Meta:
         model = PopulationData
-        fields = ['year', 'population']
+        fields = ['age_group', 'male_percentage', 'female_percentage']
