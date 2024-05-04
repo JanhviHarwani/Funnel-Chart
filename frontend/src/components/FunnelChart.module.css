@@ -1,0 +1,11 @@
+.axisTitles {
+  color: "#333333";
+  font-weight: "bolder";
+  font-size: "22px";
+}
+.axisLabels {
+  color: "#333333";
+  cursor: "default";
+  font-size: "16px";
+  font-weight: "700";
+}
