@@ -10,3 +10,7 @@ Running backend for api:
 Running frontend:
 -cd frontend
 -npm start
+
+Preview of the chart:
+![image](https://github.com/JanhviHarwani/Funnel-Chart/assets/70057643/9d39969c-a8b6-46e2-a7dc-008dd6801d91)
+
