@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import FunnelChart from "./FunnelChart"; // Import the FunnelChart component
 import { FidgetSpinner } from "react-loader-spinner";
@@ -6,15 +6,18 @@ import { API_ENDPOINTS } from "../config/apiConfig";
 import css from "./PopulationData.module.css";
 function PopulationData() {
   const [data, setData] = useState([]);
-
-  useEffect(() => {
+  const fetchData = useCallback(() => {
     axios
       .get(API_ENDPOINTS.POPULATION)
       .then((response) => {
-        setData(response.data); // Ensure data is formatted correctly
+        setData(response.data);
       })
       .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+  }, []); // Dependencies array is empty because API_ENDPOINTS.POPULATION is constant
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   return (
     <div>
